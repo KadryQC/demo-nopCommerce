@@ -5,3 +5,11 @@ Feature: F02_Login | users could use login functionality to use their accounts
   When  user login with "valid" "test22@test.com" and "P@ssw0rd"
     And user press on login button
   Then  user login to the system successfully
+
+
+Feature: F02_Login | users could use login functionality to use their accounts
+  Scenario: user couldn't login with invalid email and password
+    Given user go to login page
+    When  user login with "invalid" "wrong@test.com" and "P@ssw0rrrd"
+    And user press on login button
+    Then  user could not login to the system
