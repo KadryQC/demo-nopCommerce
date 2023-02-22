@@ -14,6 +14,12 @@ public class P02_login {
     public WebElement loginWithValidPass(){
         return Hooks.driver.findElement(By.id("Password"));
     }
+    public WebElement loginWithInvalidEmail(){
+        return Hooks.driver.findElement(By.id("Email"));
+    }
+    public WebElement loginWithInValidPass(){
+        return Hooks.driver.findElement(By.id("Password"));
+    }
     public WebElement loginButton (){
         return Hooks.driver.findElement(By.cssSelector("div[class='buttons'] button[type='submit']"));
     }
@@ -22,6 +28,12 @@ public class P02_login {
     }
     public WebElement assertText(){
         return Hooks.driver.findElement(By.linkText("My account"));
+    }
+    public WebElement assertFailText(){
+        return Hooks.driver.findElement(By.className("message-error"));
+    }
+    public WebElement assertFailColor(){
+        return Hooks.driver.findElement(By.className("message-error"));
     }
 
 

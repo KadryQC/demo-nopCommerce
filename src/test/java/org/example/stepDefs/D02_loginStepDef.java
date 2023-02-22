@@ -20,6 +20,12 @@ public class D02_loginStepDef {
         login.loginWithValidEmail().sendKeys("test25@test.com");
         login.loginWithValidPass().sendKeys("P@ssw0rd");
     }
+    @When("user login with \"invalid\" \"wrong@test.com\" and \"P@ssw0rrrd\"")
+    public void userEnterInvalidData(){
+        login.loginWithInvalidEmail().sendKeys("wrong@test.com");
+        login.loginWithInValidPass().sendKeys("P@ssw0rrrd");
+    }
+
     @And("user press on login button")
     public void userClickOnLoginButton(){
         login.loginButton().click();
@@ -31,4 +37,12 @@ public class D02_loginStepDef {
         softAssert.assertAll();
 
     }
+    @Then("user could not login to the system")
+    public void failureAssertion(){
+        softAssert.assertTrue(login.assertFailText().getText().contains("Login was unsuccessful"));
+        softAssert.assertEquals(login.assertFailColor().getCssValue("color"),"rgba(228, 67, 75, 1)");
+        softAssert.assertAll();
+    }
+
+
 }
