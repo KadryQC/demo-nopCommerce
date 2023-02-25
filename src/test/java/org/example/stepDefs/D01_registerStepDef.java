@@ -35,7 +35,7 @@ public class D01_registerStepDef {
     }
     @And("user enter email field")
     public void enterValidEmail(){
-        p01Register.enterEmail().sendKeys("test25@test.com");
+        p01Register.enterEmail().sendKeys("test15@test.com");
     }
     @And("user fills Password fields \"P@ssw0rd\" \"P@ssw0rd\"")
     public void userEnterPassword(){

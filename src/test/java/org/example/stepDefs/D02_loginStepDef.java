@@ -15,9 +15,9 @@ public class D02_loginStepDef {
     public void userGotoLoginPage(){
         login.GotoLoginPage().click();
     }
-    @When("user login with \"valid\" \"test22@test.com\" and \"P@ssw0rd\"")
+    @When("user login with \"valid\" email and \"P@ssw0rd\"")
     public void userEnterValidData(){
-        login.loginWithValidEmail().sendKeys("test25@test.com");
+        login.loginWithValidEmail().sendKeys("test15@test.com");
         login.loginWithValidPass().sendKeys("P@ssw0rd");
     }
     @When("user login with \"invalid\" \"wrong@test.com\" and \"P@ssw0rrrd\"")
