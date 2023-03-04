@@ -1,9 +1,12 @@
 package org.example.pages;
 import org.example.stepDefs.Hooks;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
+
+import javax.swing.*;
 import java.util.List;
 
 
@@ -69,6 +72,31 @@ public class P03_homePage {
         return Hooks.driver.findElements(By.className("product-title"));
 
     }
+    public WebElement hoverMainCategory(){
+
+         return Hooks.driver.findElement(By.cssSelector("ul[class='top-menu notmobile'] a[href='/computers']"));
+    }
+    public WebElement selectFromSubCategory(){
+        return Hooks.driver.findElement(By.linkText("Notebooks"));
+    }
+    public WebElement makeWordAssertion(){
+        return Hooks.driver.findElement(By.cssSelector("div[class='page-title'] h1"));
+    }
+
+    public WebElement selectFacebook(){
+        return Hooks.driver.findElement(By.cssSelector("a[href='http://www.facebook.com/nopCommerce']"));
+    }
+    public WebElement selectTwitter(){
+        return Hooks.driver.findElement(By.cssSelector("a[href='https://twitter.com/nopCommerce']"));
+    }
+    public WebElement selectYoutube(){
+        return Hooks.driver.findElement(By.cssSelector("a[href='http://www.youtube.com/user/nopCommerce']"));
+    }
+
+    public WebDriver dri(){
+        return Hooks.driver ;
+}
+
 
 
 }
